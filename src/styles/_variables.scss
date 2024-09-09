@@ -1,0 +1,44 @@
+// Couleurs principales
+$primary-color: #FF8F8F;
+$secondary-color: #FFB798;
+$third-color: #FFDFC6;
+$error-color: #FF5252;
+
+// Couleurs neutres
+$white: #FFFFFF;
+$black: #000000;
+$gray-light: #c9c9c9;
+$gray-dark: #949494;
+
+// Polices
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Lato', sans-serif;
+
+// Tailles de texte
+$font-size-base: 18px;
+$font-size-large: 24px;
+$font-size-h1: 48px;
+$font-size-h2: 36px;
+$font-size-h3: 28px;
+
+// Marges et paddings
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+$spacing-xl: 64px;
+
+// Dégradés
+$gradient-primary: linear-gradient(45deg, $primary-color, $secondary-color);
+$gradient-accent: linear-gradient(90deg, $third-color, $secondary-color);
+
+// Tailles des médias
+$media-sm: 640px;
+$media-md: 768px;
+$media-lg: 1024px;
+$media-xl: 1280px;
+
+// Autres variables
+$border-radius-base: 5px;
+$border-radius-btn: 25px;
+$box-shadow-base: 0 4px 6px rgba(0, 0, 0, 0.1);
