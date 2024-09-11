@@ -1,0 +1,115 @@
+@import '../../../../../styles/variables';
+
+.home-section {
+  height: 90vh;
+  background-image: url('../../../../../assets/background-home.jpg');
+  background-size: cover;
+  background-position: center;
+
+  .home-title-1 {
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: $white;
+    margin: 0 0 -3vw 0;
+    z-index: 2;
+    font-size: 8vw;
+    user-select: none;
+  }
+
+  .home-title-2 {
+    color: $white;
+    margin: 0;
+    z-index: 4;
+    font-size: 8vw;
+    user-select: none;
+  }
+
+  .home-picture-enzo {
+    height: 85%;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .home-video {
+    width: 30vh;
+    height: auto;
+    border: solid rgba(255, 255, 255, 0.5) 10px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .home-location-link {
+    color: $white;
+
+    svg {
+      fill: $primary-color;
+    }
+  }
+
+  .home-reviews-link {
+    color: $white;
+
+    svg {
+      fill: $third-color;
+    }
+  }
+
+  .home-btn-container {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .home-go-btn {
+    text-wrap: nowrap;
+    vertical-align: middle;
+    font-family: 'Gotham Ultra', 'Gotham', sans-serif;
+    padding: 1.3rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    border: solid rgba(255, 255, 255, 0.5) 10px;
+    background: transparent;
+    position: relative;
+    transition: all .2s;
+    overflow: hidden;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0px -0px 0px 0px #fa747a85, 0px 0px 0px 0px #ee3a43a6;
+    opacity: 0.96;
+
+    &:hover {
+      opacity: 1;
+      transform: translate(0, -6px);
+      box-shadow: 10px -10px 25px 0px rgba(252, 189, 192, 0.44), -10px 10px 25px 0px rgba(189, 167, 168, 0.32);
+    }
+
+    &::after {
+      content: '';
+      width: 600px;
+      height: 600px;
+      position: absolute;
+      background-image: linear-gradient(225deg, $primary-color 0%, $secondary-color 50%, $third-color 100%);
+      z-index: -1;
+      transition: all .5s;
+    }
+
+    &:hover::after {
+      transform: rotate(150deg);
+    }
+
+    &:active {
+      transform: translate(0, 0);
+      box-shadow: 2px -2px 25px 0px rgba(252, 189, 192, 0.37), -2px 2px 25px 0px rgba(189, 167, 168, 0.37);
+    }
+
+    svg {
+      fill: $white;
+    }
+  }
+}

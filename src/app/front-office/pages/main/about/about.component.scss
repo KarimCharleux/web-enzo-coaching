@@ -1,0 +1,14 @@
+@import '../../../../../styles/variables';
+
+
+.about-section {
+  background: linear-gradient(-7deg, $secondary-color 0%, $primary-color 100%);
+  padding: 50px;
+  clip-path: polygon(0 100px, 100% 0, 100% 80%, 0% 100%);
+  color: white;
+  margin-top: -110px;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  z-index: 3;
+}

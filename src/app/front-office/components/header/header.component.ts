@@ -1,11 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  QueryList,
-  ViewChild,
-  ViewChildren
-} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {NgForOf, NgOptimizedImage} from "@angular/common";
 import {LogoComponent} from "../../../shared/logo.component";
@@ -22,7 +15,7 @@ import {LogoComponent} from "../../../shared/logo.component";
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent implements AfterViewInit{
+export class HeaderComponent implements AfterViewInit {
 
   protected navOptions = [
     {label: 'Accueil', href: '#home'},
@@ -43,7 +36,6 @@ export class HeaderComponent implements AfterViewInit{
   }
 
   toggleNavigationExpanded(): void {
-    console.log('Toggle Navigation Expanded');
     const navigationExpanded = document.querySelector('.header-content');
     navigationExpanded?.classList.toggle('show');
 
@@ -55,7 +47,13 @@ export class HeaderComponent implements AfterViewInit{
       meat.classList.toggle('active');
     });
 
-    this.color = this.color === 'white' ? 'black' : 'white';
+    if (this.color === 'white') {
+      setTimeout(() => {
+        this.color = 'black';
+      }, 180);
+    } else {
+      this.color = 'white';
+    }
 
     this.updateUnderline(this.activeTab);
   }

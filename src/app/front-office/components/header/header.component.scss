@@ -20,6 +20,11 @@ svg {
     font-weight: 500;
     margin: 2px 0;
     text-wrap: nowrap;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      color: $third-color;
+    }
   }
 
   .selected {
@@ -60,6 +65,11 @@ svg {
   margin: 0;
   font-size: $font-size-base;
   font-weight: 500;
+
+  &:hover {
+    color: $third-color;
+    border: 0.5px $third-color solid;
+  }
 }
 
 .header-menu-icon {

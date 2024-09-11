@@ -1,5 +1,4 @@
-<header>
-  <div class="fixed flex items-center w-full max-lg:flex-col">
+<header class="fixed flex items-center w-full max-lg:flex-col">
     <a routerLink="/" class="header-logo absolute max-lg:static max-lg:mt-5">
       <app-logo [color]="color" [height]="80"></app-logo>
     </a>
@@ -8,7 +7,7 @@
       <span class="header-menu-icon-bar"></span>
       <span class="header-menu-icon-bar"></span>
     </button>
-    <div class="header-content w-full flex justify-center items-center py-10 gap-9 m-0 max-lg:py-5 max-sm:flex-col">
+    <div class="header-content w-full flex justify-center items-center pt-10 gap-9 m-0 max-lg:py-5 max-sm:flex-col">
       <nav class="header-navigation relative w-fit h-fit flex justify-center gap-9 m-0 items-center max-sm:flex-col">
         <a
           *ngFor="let option of navOptions; let i = index"
@@ -26,5 +25,4 @@
       </nav>
       <button class="btn-contact">Contact</button>
     </div>
-  </div>
 </header>

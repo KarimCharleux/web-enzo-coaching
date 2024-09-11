@@ -1,12 +1,12 @@
 import {Routes} from '@angular/router';
 import {AuthGuard} from "./shared/authGuard";
-import {HomeComponent} from "./front-office/pages/home/home.component";
+import {MainComponent} from "./front-office/pages/main/main.component";
 import {DashboardComponent} from "./back-office/pages/dashboard/dashboard.component";
 
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: MainComponent,
   },
   {
     path: 'admin',
