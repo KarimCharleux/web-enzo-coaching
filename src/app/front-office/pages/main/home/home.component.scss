@@ -6,14 +6,24 @@
   background-size: cover;
   background-position: center;
 
+  @media (max-width: $media-sm) {
+    height: 70vh;
+
+  }
+
   .home-title-1 {
     color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-width: 0.3vw;
     -webkit-text-stroke-color: $white;
     margin: 0 0 -3vw 0;
     z-index: 2;
     font-size: 8vw;
     user-select: none;
+    animation: slideLeft 2s ease;
+
+    @media (max-width: $media-md) {
+      font-size: 14vw;
+    }
   }
 
   .home-title-2 {
@@ -22,16 +32,28 @@
     z-index: 4;
     font-size: 8vw;
     user-select: none;
+    animation: neon 2s infinite, slideLeft 1.5s ease;
+
+    @media (max-width: $media-md) {
+      font-size: 14vw;
+    }
   }
 
   .home-picture-enzo {
-    height: 85%;
+    max-height: 85%;
     width: auto;
+    max-width: 100%;
     position: absolute;
+    object-fit: contain;
     bottom: 0;
     z-index: 3;
     left: 50%;
     transform: translateX(-50%);
+    animation: zoomOut 2s ease;
+  }
+
+  .home-video-container {
+    animation: slideLeft 2.4s ease;
   }
 
   .home-video {
@@ -44,6 +66,12 @@
 
   .home-location-link {
     color: $white;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $third-color;
+      transform: perspective(1px) scale(1.044) translate(0, 0);
+    }
 
     svg {
       fill: $primary-color;
@@ -52,9 +80,35 @@
 
   .home-reviews-link {
     color: $white;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: perspective(1px) scale(1.044) translate(0, 0);
+    }
 
     svg {
       fill: $third-color;
+      transition: fill 0.3s ease-in-out;
+    }
+
+    svg:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    svg:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    svg:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    svg:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    svg:nth-child(5) {
+      animation-delay: 0.4s;
     }
   }
 
@@ -112,4 +166,5 @@
       fill: $white;
     }
   }
+
 }
